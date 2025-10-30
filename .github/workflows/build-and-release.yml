@@ -38,12 +38,12 @@ jobs:
       - name: Setup build environment
         run: bash scripts/setup_env.sh
 
-      - name: Install certificates
-        env:
-          MACOS_CERTIFICATE_BASE64: ${{ secrets.MACOS_CERTIFICATE_BASE64 }}
-          MACOS_CERTIFICATE_PASSWORD: ${{ secrets.MACOS_CERTIFICATE_PASSWORD }}
-          KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
-        run: bash scripts/install_certificates.sh
+      #- name: Install certificates
+      #  env:
+      #    MACOS_CERTIFICATE_BASE64: ${{ secrets.MACOS_CERTIFICATE_BASE64 }}
+      #    MACOS_CERTIFICATE_PASSWORD: ${{ secrets.MACOS_CERTIFICATE_PASSWORD }}
+      #    KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
+      #  run: bash scripts/install_certificates.sh
 
       - name: Build Osaurus (ARM64)
         env:
